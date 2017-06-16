@@ -1,11 +1,9 @@
 package ru.stqa.selenium;
 
 import org.openqa.selenium.support.PageFactory;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import ru.stqa.selenium.pages.HomePage;
 
 public class SampleTestNgTest extends TestNgTestBase {
@@ -20,6 +18,7 @@ public class SampleTestNgTest extends TestNgTestBase {
   @Test
   public void testHomePageHasAHeader() {
     driver.get(baseUrl);
+    System.out.println("Hello, world!");
     Assert.assertFalse("".equals(homepage.header.getText()));
   }
 }
